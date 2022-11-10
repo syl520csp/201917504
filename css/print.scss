@@ -1,0 +1,160 @@
+/*reset*/
+*{
+	font-family: Lato,"Microsoft YaHei",sans-serif;
+	font-size:16px;
+	padding: 0;
+	margin: 0;
+	box-sizing:border-box;	
+}
+a{
+	text-decoration:none;
+}
+
+/*main*/ 
+html{
+	background-color: #fff;
+}
+body{	
+	width: 991px;
+	height: 1402px;
+	margin: 0 auto;
+	color:#fff;
+	background-color: #90dcb0;	
+}
+
+$color1:#70cfaf;
+$color2:#caedde;
+$color3:#F1EEE8;
+$color4:#6C6B6B;
+$color5:#3baea0;
+
+#left{
+	width: 350px;
+	height: 1402px;
+	color:#fff;
+	background-color: $color1;/*#f19584*/
+	padding:70px 60px;
+	float: left;
+	position: relative;
+}
+.avator{
+	img{
+		width: 160px;
+		height: 160px;
+		border: 10px solid $color2;
+		border-radius: 50%;
+		margin-left: -80px;		
+		position: relative;		
+		left: 50%;
+	}
+	h1{	
+		color: $color3;	
+		text-align: center;
+		font-size: 38px;
+		line-height: 80px;
+	}
+	.motto{
+		text-align: center;
+		color: $color2;	
+	}
+}
+.divline{
+	width:230px;
+	height:2px;
+	background-color:$color5;
+	margin-bottom:10px;
+}
+.line{
+	width:230px;
+	height:2px;
+	background-color:$color2;
+	opacity:0.2;
+	margin-bottom:15px;
+}
+.section{
+	line-height: 26px;
+	margin-top: 15px;
+	h2{	
+		color: $color5;
+		font-size:22px;
+		line-height: 50px;	
+		text-align: center;	
+	}	
+	.post{
+		font-size: 18px;
+		letter-spacing: 1px;
+		font-weight: 700;
+	}
+	li{		
+		text-align: justify;
+		padding-left: 5px;
+		margin: 10px 0;		
+	}
+}
+.job,.info{
+	p{			
+		text-align: center;
+	}
+}
+.contact{	
+	p{
+		position:relative;
+		line-height: 28px;
+		font-weight: 700;
+		img{
+			margin: 0 10px 0 0;
+		}
+		span{			
+			position:relative;
+			top: -4px;
+		}		
+	}
+}
+#right{
+	width: 641px;
+	height: 1402px;	
+	color: $color4;
+	background-color: $color3;
+	padding: 30px 60px 70px 35px;
+	float: right;
+	position: relative;
+}
+.part{	
+	line-height: 26px;
+	h2{
+		font-size: 30px;
+		color:$color4;
+		line-height: 50px;
+		margin: 26px 0 5px;
+	}
+	h3{
+		color: $color5;
+		font-size: 20px;
+		line-height: 40px;
+		box-sizing:content-box;
+		margin: 5px 0 0;
+		a{	
+			font-size: 20px;
+			color: $color5;
+			box-sizing:content-box;
+			border-bottom: 1px solid $color5;			
+		}
+	}
+	.item{
+		text-align: justify;
+	}
+	.date{
+		font-size: 14px;
+		letter-spacing: 1px;
+		color: $color1;			
+	}
+	.more{
+		margin-top: 10px;
+		text-align: center;
+		a{
+			font-size: 14px;
+			color: $color5;
+			border-bottom: 1px solid $color5;
+		}
+	}	
+}

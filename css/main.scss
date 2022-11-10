@@ -1,0 +1,589 @@
+/*reset*/ 
+*{	
+	font-size:16px;
+	padding: 0;
+	margin: 0;
+	box-sizing:border-box;
+}
+a{
+	text-decoration:none;
+}
+
+body{	
+	font-family: Lato,"Microsoft YaHei",sans-serif;
+	font-weight:400;
+	font-size: 14px;	
+}
+/*main*/
+$color1:#2f8886;//#40a090
+$color2:#F3FB07;
+$color3:#ffffff;
+$color4:#70cfaf;//#70cfaf
+$color5:#B7ECD8;
+$color6:#edef99;
+// $color6:
+$font-size1: 1rem;
+$font-size2: 1.3rem;
+$font-size3: 1.8rem;
+$font-size4: 3.5rem;
+$right:right;
+$left:left;
+$radius:2px;
+
+a:hover{
+	color: $color2 !important;
+}
+#lang{		
+	width:65px;
+	height:30px;
+	line-height: 30px;	
+	border-radius: 15px;	
+	background-color:$color5;
+	display: inline-block;
+	position: absolute;
+	top: 30px;
+	right: 3%;
+	z-index: 100;
+	box-sizing:border-box;
+	a{
+		width:30px;
+		height:30px;
+		font-size: 14px;
+		text-align: center;	
+		text-decoration: none;
+		color: $color1;			
+	}
+	a:hover{
+		color: $color1 !important;
+	}	
+	.cn{
+		position:absolute;
+		left: 0;
+	}
+	.en{
+		position:absolute;
+		left: 35px;			
+	}
+	.btn-bg{
+		width: 30px;
+		height: 30px;
+		border-radius:15px;
+		background-color:$color2;
+		position:absolute;
+		left: 0;
+		z-index: -1;
+	}
+} 
+.fbgColor{	
+	background-color: $color2;	
+}/*中英文切换背景*/
+
+#container{
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	top:0;
+}
+#main{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	position:relative;	
+	top:0;
+}
+.wrap{
+	width:100%;
+	height:100%;
+	color: $color3;	
+	background-color: $color4;
+	position:relative;
+	padding:50px;
+	top: 0px;
+	left: 0px;
+	display: table;
+	text-align: center;	
+	box-sizing:border-box;
+	overflow:hidden;
+	.section{
+		padding: 0px;
+		margin: 0px;
+		display: table-cell;
+		vertical-align: middle;
+		h1{
+			font-size: $font-size4;
+			font-weight:700; 
+			text-shadow: 1px 2px $color4,2px 4px $color5;
+			line-height: 80px;
+			margin: 10px auto;
+		}	
+	}
+}
+.intro{
+	img{
+		border: 10px solid $color5;
+		border-radius: 180px;
+		margin: 0px auto;
+	}		
+	.position{
+		color: $color5;
+		font-size: $font-size3;
+		font-weight: 500;	
+		margin: 20px auto 10px;
+	}
+	.place{
+		font-size: $font-size1;
+		line-height: 25px;
+		color: $color1;
+		margin: 0 auto;
+	}
+}
+
+$opacity:0.75,0.8,0.85,0.7,0.85,0.7,0.75,0.6,0.6,0.7;
+@mixin opty($value){	
+	opacity:$value;		
+}
+.skills{
+	.skill{
+		margin-top: 25px;
+		@for $i from 1 through 10{
+			.skill-#{$i}{
+				font-size: 1.2rem;
+				display: inline-block;
+				border-radius: 5px;
+				padding: 2px 10px;
+				margin: 10px 5px;
+				background-color: $color1;
+				@include opty(nth($opacity, $i));
+			}
+		}
+	}
+}
+%title{
+	width: 100%;
+	height: 3rem;
+	color: $color1;
+	font-size: $font-size2;
+	font-weight: 400;				
+	text-align: center;	
+}
+%a{
+	font-size: 1.2rem;							
+	color: #ffffff;
+	text-decoration: none;
+	background-color:$color1;
+	opacity: 0.7;						
+	border-radius: 5px; 
+	padding: 2px 10px;
+	cursor: pointer;
+	margin: 10px 5px;
+	float: left;
+	position: relative;	
+	z-index:10;
+}
+.works{
+	.wLink{
+		margin-top: 25px;
+		width: 730px;
+		margin-left: 50%;
+		transform: translateX(-50%);
+		position:relative;
+		.demos1{			
+			width: 350px;	
+			height: 230px;					
+			// margin: 0 30px 0 0;							
+			position:relative;
+			float: left;
+			.title{
+				@extend %title;				
+			}
+			.demo1{
+				width: 100%;
+				position:relative;
+				a{
+					@extend %a;						
+				}
+				a:nth-child(1){
+					margin-left: 100px;					
+				}
+				a:nth-child(3){
+					margin-left: 40px;					
+				}	
+				a:nth-child(6){
+					margin-left: 30px;					
+				}	
+				a:nth-child(9){
+					margin-left: 120px;					
+				}	
+			}
+		}
+		.demos2{
+			width: 380px;
+			height: 230px;					
+			position:relative;
+			float: left;
+			.title{
+				@extend %title;						
+			}
+			.demo2{				
+				width: 100%;
+				position:relative;
+				padding-top:45px;				
+				a{
+					@extend %a;														
+				}
+				a:nth-child(1){
+					margin-left: 110px;					
+				}
+				a:nth-child(3){
+					margin-left: 65px;					
+				}
+			}			
+		}
+		.more-demo{
+			width: 100%;			
+			text-align: center;
+			position: relative;
+			top: 30px;
+			a{
+				font-size:$font-size1;
+				color: $color1; 				
+				span{
+					animation: streamerA linear 2s infinite;
+				}
+			}
+			a:hover{
+				color: $color2;
+				background-color:$color4 !important;
+				text-decoration: underline;
+				span{
+					color: $color2 !important;
+					animation:none;
+				}
+			}
+
+		}
+	}
+}
+
+@keyframes streamerA{
+	0%{
+		color: $color1;
+	}
+	
+	50%{
+		color: #ffffff;
+	}
+	
+	100%{
+		color: $color1;
+	}
+}
+
+.education{
+	.edu{		
+		margin-top: 25px;
+		.edu1,.edu2{			
+			p.date{
+				color:$color1; 
+				font-size: $font-size1;
+			}
+			p.degree{
+				span{
+					color: $color3;
+					font-size: $font-size3;
+					font-weight: 700;
+					line-height: 1.5em;						
+				}	
+				.school{
+					color: $color1;
+				}			
+			}			
+			p.major{
+				color: $color5;				
+				font-size: $font-size2;
+				line-height: 1.5em;				
+				margin: 0 0 15px;
+				em{
+					font-size: 1em;
+				}
+				
+			}
+			.deg,.hb{
+				opacity: 0.7;
+			}
+		}
+	}
+}
+.contact{
+	margin-top: 25px;
+	.know-more{
+		p{
+			display: inline-block;
+			padding: 0 10px;
+			border-left: 3px solid $color3;
+			line-height: 15px;	
+			margin-bottom: 15px;		
+			a{
+				color: $color1;
+				font-size: $font-size3;
+				font-weight: 700;
+				position: relative;				
+			}
+		
+		}
+		p:nth-child(1){
+			border: none;
+		}
+	}
+	.email{
+		font-size: $font-size2;
+		line-height: 30px;
+		span{
+			font-size:$font-size2;
+			color: $color5;
+		}
+	}
+	.download{
+		a{
+			font-size: $font-size3;
+			font-weight: 700;
+			color: $color2;
+			line-height: 40px;
+		}
+		a:hover{
+			color: $color1 !important;
+		}
+	}
+}
+%span{	
+	height: 20px;
+	font-size: 12px;
+	line-height: 17px;
+	background-color:$color5;
+	text-align: right;	
+	border-radius:3px;
+	padding:2px 5px;	
+	z-index: 10;
+	display: none;
+}
+#nav{
+	width: 20px;	
+	height: 200px;
+	color: $color1;		
+	position: fixed;
+	top: 50%;	
+	right: 3%;
+	margin-top: -70px;
+	z-index: 11;	
+	ul{
+		text-align: center;
+		li{
+			display: block;
+			list-style: none;
+			width: 13px;
+			height: 13px;	
+			border: 2px solid $color1;
+			border-radius: 10px;
+			list-style: none;	 
+			margin-top: 20px;
+			position: relative;
+			a{				
+				display: block;
+				width: 20px;
+				height: 20px;	
+			}	
+			a:hover{
+				background-color:transparent !important;
+			}
+			span{
+				@extend %span;									
+				position:absolute;								
+				top: -8px;
+				left: -45px;				
+			}
+		}
+		li:first-child{
+			margin-top: 0;		
+		}
+		li:hover{
+			background-color:$color2;
+			span{								
+				display: block;		
+			}
+		}
+	}
+
+	.top{
+		width: 16px;
+		height:16px;	
+		border-radius: 50%;
+		background-color: $color4;
+		position:absolute;
+		bottom: 15px;
+		right: 5px;			
+		z-index:100;
+		img{
+			position: relative;
+			top: -3px;
+			left: -3px;
+		}
+		span{
+			@extend %span;				
+			position:absolute;
+			left: -65px;				
+			top: 0px;		
+		}		
+	}
+	.top:hover{
+		background-color:$color2;	
+		span{
+			display: block;
+		}		
+	}	
+}
+@media screen and (max-width: 1280px){	
+	$font-size1: 0.9rem;
+	$font-size2: 1.2rem;
+	$font-size3: 1.4rem;
+	$font-size4: 3.0rem;
+	.place, p.date{
+		font-size: $font-size1 !important;
+	}
+	h1{
+		font-size: $font-size4 !important;
+	}
+	@for $i from 1 through 10{
+		.skill-#{$i}{
+			font-size: $font-size2 !important;
+			padding: 2px 6px !important;	
+			margin: 8px 3px !important;		
+			@include opty(nth($opacity, $i));
+		}
+	}
+	.major,.title,.email{
+		font-size: $font-size2 !important;		
+	}
+	.email{
+		span{
+			font-size: $font-size2 !important;		
+		}
+	}
+	.demo1,.demo2{
+		a{
+			font-size: $font-size2 !important;		
+		}
+	}
+	.position{
+		font-size: $font-size3 !important;		
+	}
+	.degree{
+		span{
+			font-size: $font-size3 !important;		
+		}
+	}
+	.know-more{
+		p{
+			a{
+				font-size: $font-size3 !important;		
+			}
+		}
+	}
+	.download{
+		a{
+			font-size: $font-size3 !important;		
+		}
+	}
+}
+@media screen and (max-width: 760px){	
+	$font-size1: 0.8rem;
+	$font-size2: 1.0rem;
+	$font-size3: 1.2rem;
+	$font-size4: 2.5rem;
+
+	.skill,.edu,.contact{
+		margin-top: 5px !important;
+	}
+	.place, p.date{
+		font-size: $font-size1 !important;
+	}
+	h1{
+		font-size: $font-size4 !important;
+	}
+	@for $i from 1 through 10{
+		.skill-#{$i}{
+			font-size: $font-size2 !important;
+			padding: 2px 6px !important;	
+			margin: 8px 3px !important;		
+			@include opty(nth($opacity, $i));
+		}
+	}
+	.major,.title,.email{
+		font-size: $font-size2 !important;		
+	}
+	.email{
+		span{
+			font-size: $font-size2 !important;		
+		}
+	}
+	.wLink{
+		margin-top: 5px !important;
+		width: 380px !important;		
+		.title{
+			height: 2rem !important;
+		}
+		.demos1{
+			height: 190px !important;
+			clear: both !important;
+			margin-left:15px !important;
+		}
+		.demos2{
+			clear: both !important;	
+			height: 90px !important;				
+		}
+		.demo1{
+			a{
+				font-size: $font-size2 !important;	
+				margin-top:2px !important;	
+			}
+		}
+		.demo2{
+			padding-top:0 !important;	
+			a{
+				font-size: $font-size2 !important;
+				margin-top:2px !important;		
+			}
+		}
+		.more-demo{			
+			clear: both !important;	
+			height: 25px !important;
+			a{
+				height: 25px !important;
+				font-size: $font-size1 !important;
+			}			
+		}	
+	}
+	.position{
+		margin-top: 10px !important;
+		font-size: $font-size3 !important;		
+	}
+	.degree{
+		span{
+			font-size: $font-size3 !important;		
+		}
+	}
+	.know-more{
+		p{
+			margin-bottom: 5px !important;
+			a{
+				font-size: $font-size3 !important;		
+				line-height:  1rem !important;						
+			}
+		}
+	}
+	.download{
+		a{
+			line-height:  1.8rem !important;		
+		}
+	}
+}
+

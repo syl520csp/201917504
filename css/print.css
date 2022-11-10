@@ -1,0 +1,132 @@
+/*reset*/
+* {
+  font-family: Lato,"Microsoft YaHei",sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+/*main*/
+html {
+  background-color: #fff; }
+
+body {
+  width: 991px;
+  height: 1402px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #90dcb0; }
+
+#left {
+  width: 350px;
+  height: 1402px;
+  color: #fff;
+  background-color: #70cfaf;
+  /*#f19584*/
+  padding: 70px 60px;
+  float: left;
+  position: relative; }
+
+.avator img {
+  width: 160px;
+  height: 160px;
+  border: 10px solid #caedde;
+  border-radius: 50%;
+  margin-left: -80px;
+  position: relative;
+  left: 50%; }
+.avator h1 {
+  color: #f1eee8;
+  text-align: center;
+  font-size: 38px;
+  line-height: 80px; }
+.avator .motto {
+  text-align: center;
+  color: #caedde; }
+
+.divline {
+  width: 230px;
+  height: 2px;
+  background-color: #3baea0;
+  margin-bottom: 10px; }
+
+.line {
+  width: 230px;
+  height: 2px;
+  background-color: #caedde;
+  opacity: 0.2;
+  margin-bottom: 15px; }
+
+.section {
+  line-height: 26px;
+  margin-top: 15px; }
+  .section h2 {
+    color: #3baea0;
+    font-size: 22px;
+    line-height: 50px;
+    text-align: center; }
+  .section .post {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 700; }
+  .section li {
+    text-align: justify;
+    padding-left: 5px;
+    margin: 10px 0; }
+
+.job p, .info p {
+  text-align: center; }
+
+.contact p {
+  position: relative;
+  line-height: 28px;
+  font-weight: 700; }
+  .contact p img {
+    margin: 0 10px 0 0; }
+  .contact p span {
+    position: relative;
+    top: -4px; }
+
+#right {
+  width: 641px;
+  height: 1402px;
+  color: #6c6b6b;
+  background-color: #f1eee8;
+  padding: 30px 60px 70px 35px;
+  float: right;
+  position: relative; }
+
+.part {
+  line-height: 26px; }
+  .part h2 {
+    font-size: 30px;
+    color: #6c6b6b;
+    line-height: 50px;
+    margin: 26px 0 5px; }
+  .part h3 {
+    color: #3baea0;
+    font-size: 20px;
+    line-height: 40px;
+    box-sizing: content-box;
+    margin: 5px 0 0; }
+    .part h3 a {
+      font-size: 20px;
+      color: #3baea0;
+      box-sizing: content-box;
+      border-bottom: 1px solid #3baea0; }
+  .part .item {
+    text-align: justify; }
+  .part .date {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #70cfaf; }
+  .part .more {
+    margin-top: 10px;
+    text-align: center; }
+    .part .more a {
+      font-size: 14px;
+      color: #3baea0;
+      border-bottom: 1px solid #3baea0; }
